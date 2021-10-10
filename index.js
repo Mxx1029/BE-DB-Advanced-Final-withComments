@@ -8,8 +8,8 @@ config(app);
 await seed();
 await connect();
 
-app.use('/person', personController);
-app.use('/score', scoreController);
+app.use('/persons', personController);
+app.use('/scores', scoreController);
 app.use(errorController);
 
 app.listen(process.env.PORT, () => {
