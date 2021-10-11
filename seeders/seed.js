@@ -15,7 +15,7 @@ export default async function seed() {
         console.log(`Created ${person.name}`);
         
         // Create some scores per person
-        const amountOfScores = 10 + faker.datatype.number(50);
+        const amountOfScores = 10 + faker.datatype.number(50); // alternative to Math.floor(Math.random() max - min + 1) + min
         for (let i = amountOfScores; --i; ) {
             const score = await Score.create({
                 person,

@@ -3,7 +3,7 @@ import { Score } from '../models/score.js';
 const router = express.Router();
 
 // Get all scores (VERY HEAVY)
-router.get("/", (req,res,next) => {
+router.get("/", async (req,res,next) => {
     try {
         const scores = await Score.find();
         res.send(scores);
@@ -13,7 +13,7 @@ router.get("/", (req,res,next) => {
 });
 
 // Get single score
-router.get("/:id", (req,res,next) => {
+router.get("/:id", async (req,res,next) => {
     try {
         const score = await Score.findById(req.params.id);
         if (!score) {

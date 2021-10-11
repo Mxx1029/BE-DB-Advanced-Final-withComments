@@ -1,5 +1,7 @@
 # Persons and Scores
 
+- Hehe, we edited this one together during class :D
+
 **TASK** Add endpoints!
 
 - *Note* Don't return the "__v" field for any requests
